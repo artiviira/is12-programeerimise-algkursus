@@ -1,0 +1,45 @@
+#hindeline t66
+
+def esimene():
+        a=int(raw_input("Sisesta esimene arv: ")) #l2bijagatav
+        b=int(raw_input("Sisesta teine arv: "))
+        if a>b:
+                s = b + (3 - (b % 3))
+                x=0
+                while s<a:
+                        s=s+3
+                        x=x+1
+                print "Arvude "+str(a)+" ja "+str(b)+" vahel on "+str(x)+" arvu mis jaguvad 3-ga"
+        elif a<b:
+                s = a +(3- (a % 3))
+                x=0
+                while s<b:
+                        s=s+3
+                        x=x+1
+                print "Arvude "+str(a)+" ja "+str(b)+" vahel on "+str(x)+" arvu mis jaguvad 3-ga"
+        else:
+                print "Arvud on v6rdsed"
+esimene()
+
+
+def teine():
+        tekst = raw_input("Sisestage tekst: ")
+
+        if tekst == str(tekst.lower()) and any(c.isdigit() for c in tekst):
+                print "V2iket2hed ja numbrid"
+        elif tekst == str(tekst.lower()):
+                print "V2iket2hed ja numbriteta"
+        elif tekst == str(tekst.upper()) and any(c.isdigit() for c in tekst):
+                print "Suurt2hed ja numbrid" 
+        elif tekst == str(tekst.upper()):
+                print "Suurt2hed ja numbriteta"
+        elif any(c.isdigit() for c in tekst):
+                print "Suur-v2iket2hed ja numbrid"
+        else:
+                print "Suur-v2iket2hed ja numbriteta"
+teine()
+
+
+        
+        
+            
