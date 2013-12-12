@@ -1,0 +1,26 @@
+import sys
+from random import randint
+import time
+
+def funx(x,y,u):
+    sys.stdout.write("\033["+str(x)+";"+str(y)+u)
+sys.stdout.flush()
+time.sleep(2)
+
+
+def sq(x,y,w,h):
+    funx(x,y,"#")
+    funx(x+w,y,"#")
+    funx(x,y+h,"#")
+    funx(x+y,y+h,"#")
+sq(10,5,5,10)
+
+
+def sky(u):
+    a=0
+    while a<50:
+        x=randint(0,70)
+        y=randint(0,20)
+        funx(x,y,u)
+        a=a+1
+sky("*")
